@@ -4,9 +4,25 @@
 <head>
 	<meta charset="utf-8" />
 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+
+	<link rel="stylesheet" href="styles/slicknav.css">
 	<link rel="stylesheet" href="styles/normalize.css">
 	<link rel="stylesheet" href="styles/main.css">
+
+
+
+	<!--SlickNav Links-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+	<script src="js/jquery.slicknav.min.js"></script>
+	
+	<script type="text/javascript">
+		$(document).ready(function(){
+		$('#nav_menu').slicknav({prependTo:"#mobilemenu"});
+		});
+	</script>
+
 
 	<!--[if lt IE 9]>
 	<script src="bower_components/html5shiv/dist/html5shiv.js"></script>
@@ -24,7 +40,44 @@
 		
 	</header>
 
+	<nav id="mobilemenu"></nav>
+	<nav id="nav_menu">
+		<ul>
+			<li>
+				<a href="index.html">home</a>
+			</li>
+			<li>
+				<a href="cardio/index.html">Cardio</a>
+			</li>
+			<li>
+				<a href="diet/index.html">Diet</a>
+			</li>
+			<li>
+				<a href="strength/index.html">strength</a>
+			</li>
+			<li id="last">
+				<a href="stress/index.html">stress</a>
+			</li>
+		</ul>
+	</nav>
+
 	<main>
+
+		<aside id="leftcol"> 
+			<nav id="nav_list">
+			<h3>Additional Resources</h3>
+			<ul>
+				<li><a href="https://education.nationalgeographic.org/resource/resource-types" target="_blank" > Additional Resources </a></li>
+				<li><a href="https://www.nih.gov/health-information/physical-wellness-toolkit" target="_bllank"> Physical Activity and Health</a></li>
+				<li>Stretching Exercises</li>
+				<li>Cardiovascular Training</li>
+				<li>Yoga Workout</li>
+
+			</ul>
+			</nav>
+		</aside>
+
+
 		<section>
 
 						<h2>Get Ready to Shape Up!</h2>
@@ -58,19 +111,30 @@
 		</section>
 
 
-		<aside>
-			<h3>Additional Resources</h3>
-			<ul>
-				<li><a href="https://education.nationalgeographic.org/resource/resource-types" target="_blank" > Additional Resources </a></li>
-				<li><a href="https://www.nih.gov/health-information/physical-wellness-toolkit" target="_bllank"> Physical Activity and Health</a></li>
-				<li>Stretching Exercises</li>
-				<li>Cardiovascular Training</li>
-				<li>Yoga Workout</li>
+		<aside id="rightcol">
+			<h3>How to prepare to Shape Up!</h3>
+			<h4>Get a check up</h4>
+			<p>If you have any health issues or take any medications, be sure to consult with your healthcare provider before beginning a new exercise or diet regimen.
+			</p>
 
-			</ul>
+			<h4>Dress for Success
+			</h4>
+			<p>Workout clothes should be comfy. While exercising, you should be thinking about what you're doing, not what you're wearing. That includes good shoes, which are essential for running, jogging, or walking, and socks that absorb shock and sweat.
+			</p>
+
+			<h4>Equipment?
+			</h4>
+			<p>You don't need to buy a lot of fancy equipment to get in shape. But you might want to invest in a yoga mat, a large exercise ball, or some weights, depending on your Shape Up! plan.
+			</p>
+
+			<h4>Resist Temptation
+			</h4>
+			<p>It's hard to eat right when everyone else is buying lunch at a fast food restaurant. Invest in some good food containers and bring your healthy lunch and snacks. Your body and your wallet will thank you.</p>
+			
 		</aside>
 
 
+		
 
 	</main>
 

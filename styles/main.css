@@ -1,7 +1,12 @@
+
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 100%;
-    max-width: 1000px;
+    max-width: 1200px;
     width: 100%;
     border: 3px solid steelblue;
     margin: auto;
@@ -14,6 +19,7 @@ body {
 header {
     border-bottom: 3px solid steelblue;
     background-image: linear-gradient(white, lightsteelblue);
+    border-radius: 25px 25px 0 0;
 }
 
 header h2 {
@@ -37,6 +43,9 @@ p {
 header img {
     float: left;
     margin: o .75em;
+    max-width: 140px;
+    min-width: 70px;
+    width: 100%;
 }
 
 html {
@@ -53,6 +62,7 @@ html {
 
 main {
     clear: left;
+    padding-right: .25em;
 }
 
 /* Section Link Colors */
@@ -77,22 +87,32 @@ aside li {
     line-height: 1.75em;
 }
 
+aside {
+    width: 25%;
+    float: left;
+}
+
 section {
-    float: right;
-    width: 70%;
+    float: left;
+    width: 50%;
+    padding: 0 .3em;
 
 }
 
+#rightcol {
+    float: right;
+    width: 25%;
+    border-left: 3px solid steelblue;
+    padding-left: 10px;
 
-aside h3 {
+}
+
+asi
+de h3 {
     padding-top: 50px;
     color: maroon;
 }
 
-
-aside {
-    width: 30%;
-}
 
 .shadow {
     text-shadow: 3px 3px 8px gray;
@@ -110,4 +130,182 @@ footer p {
     text-align: center;
     color: white;
     margin-top: 50px;
+}
+
+
+
+
+/*
+Navigation menue using block and float
+*/
+
+
+#nav_menu {
+    border-bottom: 3px solid steelblue;
+}
+
+#nav_menu ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    position: relative;
+}
+
+#nav_menu ul li {
+    float: left;
+    width: 20%;
+}
+
+#nav_menu ul li a {
+    text-align: center;
+    display: block;
+    padding: .7em 0;
+    background-color: steelblue;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+}
+
+#nav_menu ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+}
+
+#nav_menu ul ul li {
+    float: none;
+}
+
+#nav_menu ul li:hover > li {
+    display: block;
+}
+
+#nav_menu > ul::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+#nav_menu ul a:hover {
+    color: black;
+    background-color: lightsteelblue;
+}
+
+
+
+
+#nav_menu ul ul {
+    display: none;
+}
+
+
+/*
+#nav_menu {
+    margin: 0;
+
+}
+
+#nav_menu ul {
+    list-style-type: none;
+    text-align: center;
+    border-top: 1px solid steelblue;
+    border-bottom: 1px solid steelblue;
+    padding: 10px 0;
+}
+
+#nav_menu ul li {
+    display: inline;
+    border-right: 2px solid black;
+    padding: 10px 3em;
+}
+
+#nav_menu #last {
+    border-right: none;
+}
+
+#nav_menu ul li a {
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+
+#nav_menu ul li a:hover {
+    color: red;
+
+}
+*/
+
+
+#nav_list h2 {
+    margin-bottom: 5px;
+}
+
+#nav_list ul {
+    list-style-type: none;
+}
+
+#nav_list ul li {
+    width: 90%;
+    margin-top: 0;
+    margin-bottom: .5em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#nav_list ul li a {
+    display: block;
+    font-weight: bold;
+    text-decoration: none;
+    background-color: lightsteelblue;
+    padding: .5em;
+    color: black;
+}
+
+#nav_list ul li a:hover {
+    background-color: steelblue;
+    color: white;
+}
+
+#mobilemenu {
+    display: none;
+}
+
+
+/* 
+MEDIA QUERIES
+*/
+
+@media only screen and (max-width: 900px) {
+    body {
+        box-shadow: none;
+        border: none;
+        font-size: 90%;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+
+    #nav_menu {
+        display: none;
+    }
+    #mobilemenu {
+        display: block;
+    }
+    .slicknav_menu {
+        background-color: steelblue;
+    }
+    #leftcol {
+        display: none;
+    }
+    section, aside, #rightcol {
+        float: none;
+        width: 95%;
+        margin: 10px auto;
+    }
+
+}
+
+@media only screen and (max-width: 479px) {
+    
 }
